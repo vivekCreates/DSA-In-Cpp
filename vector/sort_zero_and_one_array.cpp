@@ -23,7 +23,7 @@ void sort_zeroes_and_one(vector<int> &a){
         }
         
     }
-    
+    return;
 }
 
 int main(){
@@ -31,7 +31,7 @@ int main(){
     cout<< "Enter no. of elements: " ;
     cin>>n;
     
-    vector<int> arr(n);
+    vector<int> arr;
     for (int i = 0; i < n; i++)
     {
         int elem;
