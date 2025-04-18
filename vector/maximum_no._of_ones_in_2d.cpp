@@ -21,9 +21,8 @@ int maximum_no_of_ones_row(vector<vector<int>> &v){
             max_ones = numberOfOnes;
             max_ones_rows = i+1;
            }
-           
+           break;
         }
-        
       }
     }
     return max_ones_rows;
