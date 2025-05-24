@@ -76,10 +76,11 @@ int main()
     {
         for (int j = 0; j < col2; j++)
         {
+            C[i][j] = 0;
             for (int k = 0;k < row2; k++)
             {
                
-                C[i][j] =  A[i][k] * B[k][j];
+                C[i][j] +=  A[i][k] * B[k][j];
             }
             
         }
