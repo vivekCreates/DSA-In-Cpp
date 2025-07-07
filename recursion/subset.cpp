@@ -8,7 +8,6 @@ void findAllSubset(vector<int>& arr,vector<int>& ans,int i,vector<vector<int>>& 
         allSubsets.push_back({ans});
         return;
     }
-
     ans.push_back(arr[i]);
     findAllSubset(arr,ans,i+1,allSubsets);
     ans.pop_back();
@@ -22,17 +21,13 @@ int main(){
     vector<vector<int>> subsets;
     vector<int> ans;
     findAllSubset(arr,ans,0,subsets);
-
     cout << "All Subsets: ";
-    for (int i = 0; i < subsets.size(); i++)
-    {
+    for (int i = 0; i < subsets.size(); i++){
         cout << "[";
-        for (int j = 0; j < subsets[i].size(); j++)
-        {
+        for (int j = 0; j < subsets[i].size(); j++){
             cout << " " << subsets[i][j] << " ";
         }
          cout << "]";
     }
     cout << endl;
-    
 }
