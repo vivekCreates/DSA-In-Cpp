@@ -6,26 +6,29 @@ using namespace std;
 
 class MinStack{
 public:
-    stack<pair<int,int>> s;
+    stack<int> s;
+    int minVal = 0;
     MinStack(){}
 
     void push(int val){
         if(s.empty()){
-            s.push({val,val});
-        }else{
-            int minVal = min(val,s.top().second);
-            s.push({val,minVal});
-        }
+        s.push(val);
+        minVal = val;
+      }
+       s.push(val);
+      if(s.top()<minVal){
+        minVal = s.top();
+       }
     }
 
     void pop(){
         s.pop();
     }
     int top(){
-        return s.top().first;
+        return s.top();
     }
     int getMin(){
-        return s.top().second;
+        return minVal;
     }
 };
 
