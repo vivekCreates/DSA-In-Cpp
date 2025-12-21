@@ -15,6 +15,15 @@ public:
     }
 };
 
+int size(Node* root){
+    if (root==NULL) return 0;
+    return 1 + size(root->left) + size(root->right);
+}
+
+int sum(Node* root){
+    if(root==NULL) return 0;
+    return root->data + sum(root->left) + sum(root->right);
+}
 
 void print(Node* root){
     if (root == NULL) return;
@@ -48,5 +57,7 @@ int main(){
     two->right = five;
 
     print(root);
+    cout << "sum: " << sum(root) << endl;
+    cout << "size: " << size(root) << endl;
     return 0;
 }
